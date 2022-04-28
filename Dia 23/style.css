@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: verdana;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(./assets/floor.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.book {
+  position: relative;
+  top: 0;
+  width: 400px;
+  height: 600px;
+  background: #fff;
+  transform: rotate(-37.5deg) skewX(10deg);
+  box-shadow: -35px 35px 50px rgba(0,0,0,1);
+}
+
+.book:hover{
+    transform: rotate(-37.5deg) skewX(10deg) translate(20px, -20px);
+    box-shadow: -50px 50px 100px rgba(0,0,0,1);
+}
+
+.book::before{
+    content: '';
+    width: 30px ;
+    height: 100%;
+    background: url(./assets/bg.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: skewY(-45deg) translate(-30px,-15px);
+    box-shadow: inset -10px 0 20px rgba(0,0,0,0.2) ;
+}
+
+.book::after{
+    content: '';
+    width: 100% ;
+    height: 30px;
+    background: #ccc;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: skewX(-45deg) translate(15px,30px);
+}
+
+.book h2{
+    position: absolute;
+    bottom: 100px;
+    left: 20px;
+    font-size: 5em;
+    line-height: 1em;
+    color: #fff;
+}
+
+.book h2 span {
+    background: url(./assets/bg.jpg);
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.book .writer{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #262626;
+    font-size: 0.6em;
+    padding-top: 5px;
+    font-weight: 500;
+    border-top-left-radius: 1px solid #262626;
+}
+
+.book .writer i {
+    font-weight: 700;
+}
+
+.book .cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: url(./assets/bg.jpg);
+    background-size: cover;
+}
